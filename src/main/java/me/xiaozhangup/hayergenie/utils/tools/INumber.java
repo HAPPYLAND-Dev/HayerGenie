@@ -1,4 +1,4 @@
-package org.example.utils.tools;
+package me.xiaozhangup.hayergenie.utils.tools;
 
 public class INumber {
 

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>PluginFastTemplate</artifactId>
+    <groupId>me.xiaozhangup.hayergenie</groupId>
+    <artifactId>HayerGenie</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -41,6 +41,10 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>iridiumdevelopment</id>
+            <url>https://nexus.iridiumdevelopment.net/repository/maven-releases/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -61,6 +65,18 @@
             <artifactId>VaultAPI</artifactId>
             <version>1.7</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.iridium</groupId>
+            <artifactId>IridiumSkyblock</artifactId>
+            <version>3.2.8</version>
+        </dependency>
+        <dependency>
+            <groupId>ink.ptms.adyeshach</groupId>
+            <artifactId>Adyeshach</artifactId>
+            <version>1.5.13</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Adyeshach-1.5.13-op15.jar</systemPath>
         </dependency>
     </dependencies>
 
