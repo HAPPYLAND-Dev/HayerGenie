@@ -10,12 +10,12 @@ public class LandEvent implements Listener {
 
     @EventHandler
     public void landDelete(IslandDeleteEvent e) {
-        GenieMaster.removeGenie(e.getIsland());
+        GenieMaster.removeGenie(e.getIsland(), false);
     }
 
     @EventHandler
     public void landRegen(IslandRegenEvent e) {
-        GenieMaster.removeGenie(e.getIsland());
+        GenieMaster.removeGenie(e.getIsland(), false);
     }
 
 }

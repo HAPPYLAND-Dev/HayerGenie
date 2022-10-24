@@ -6,6 +6,7 @@ main: me.xiaozhangup.hayergenie.HayerGenie
 depend:
   - Vault
   - HayerSkyBlock
+  - Adyeshach
 
 commands:
   geniedebugcreat:
