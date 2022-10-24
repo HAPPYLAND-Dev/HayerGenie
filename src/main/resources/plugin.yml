@@ -1,4 +1,11 @@
 name: HayerGenie
 version: ${project.version}
 api-version: 1.16
-main: me.xiaozhangup.hayergenie
+main: me.xiaozhangup.hayergenie.HayerGenie
+
+depend:
+  - Vault
+  - HayerSkyBlock
+
+commands:
+  geniedebugcreat:
