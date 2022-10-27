@@ -15,6 +15,7 @@ import me.xiaozhangup.hayergenie.utils.tools.IString;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 import static me.xiaozhangup.hayergenie.HayerGenie.LANDGENIE;
@@ -23,6 +24,7 @@ public class GenieMaster {
 
     public static void creatGenie(Location location, Player p) {
         Island island = landFromPlayer(p);
+        if (island == null) return;
         ConfigManager.writeConfig(LANDGENIE, island.getId() + ".pos", location);
 
         location.add(0.5D, 1.2D, 0.5D);
@@ -65,7 +67,7 @@ public class GenieMaster {
         return IridiumSkyblock.getInstance().getIslandManager().getPlayersOnIsland(landFromPlayer(p)).contains(user);
     }
 
-    public static Island landFromPlayer(Player p) {
+    public static @Nullable Island landFromPlayer(Player p) {
         User user = IridiumSkyblock.getInstance().getUserManager().getUser(p);
         var is = user.getIsland();
         return is.orElse(null);
