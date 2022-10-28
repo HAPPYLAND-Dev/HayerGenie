@@ -5,6 +5,7 @@ import com.iridium.iridiumskyblock.api.IridiumSkyblockAPI;
 import com.iridium.iridiumskyblock.database.Island;
 import me.xiaozhangup.hayergenie.GenieMaster;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,8 +26,10 @@ public class LineControl implements Listener {
         var land = GenieMaster.landFromPlayer(p);
         if (land == null) return;
         if (!online.contains(land)) {
+            Location geniePos = GenieMaster.getGeniePos(land);
+            if (geniePos == null) return;
             online.add(land);
-            GenieMaster.creatGenie(GenieMaster.getGeniePos(land), p);
+            GenieMaster.creatGenie(geniePos, p);
         }
     }
 
